@@ -32,33 +32,33 @@ void solve(char* filename)
  * 
 */
 int win_part_1(char move_1, char move_2){
-    if(strcmp(&move_2, "X") > 2 ){
-        if (strcmp(&move_1, "C") > 2){
+    if(move_2 == 88 ){
+        if (move_1 == 67){
             return ROCK_PTS + WIN;
         }
-        else if (strcmp(&move_1, "B") > 2){
+        else if (move_1 == 66){
             return ROCK_PTS + LOSS;
         }
         else {
             return ROCK_PTS + DRAW;
         }
     }
-    if(strcmp(&move_2, "Y") > 2){
-        if (strcmp(&move_1, "A") > 2){
+    if(move_2 == 89){
+        if (move_1 == 65){
             return PAPER_PTS + WIN;
         }
-        else if (strcmp(&move_1, "C") > 2){
+        else if (move_1 == 67){
             return PAPER_PTS + LOSS;
         }
         else {
             return PAPER_PTS + DRAW;
         }
     }
-     if (strcmp(&move_2, "Z") > 2){
-        if (strcmp(&move_1, "B") > 2){
+     if (move_2 == 90){
+        if (move_1 == 66){
             return SCISSORS_PTS + WIN;
         }
-        else if (strcmp(&move_1, "A") > 2){
+        else if (move_1 == 65){
             return SCISSORS_PTS + LOSS;
         }
         else {
